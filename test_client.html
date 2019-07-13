@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<canvas></canvas>
+<canvas id="myCanvas" ></canvas>
 
 
 <script>
@@ -16,6 +16,16 @@
   var player = new jsmpeg(client, {
     canvas: canvas 
   });
+
+
+  window.setTimeout(function(){
+    height = 270;
+canvas = document.getElementById('myCanvas'), 
+ratio = canvas.width / canvas.height;
+width = height * ratio;
+canvas.style.width = width + 'px';
+canvas.style.height = height + 'px';
+  },1000)
 </script>
 </body>
 </html>
